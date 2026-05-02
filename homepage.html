@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - Home</title>
+    <style>
+        :root {
+            --rbx-bg: #F2F4F5;
+            --rbx-header: #FFFFFF;
+            --rbx-text: #393B3D;
+            --rbx-blue: #00A2FF;
+            --rbx-border: #CED1D1;
+            --rbx-card: #FFFFFF;
+        }
+
+        body {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--rbx-bg);
+            color: var(--rbx-text);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- BIGGER HEADER --- */
+        .navbar {
+            background-color: var(--rbx-header);
+            height: 100px; /* Mas mataas na header */
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 50px; 
+            border-bottom: 1px solid var(--rbx-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left { display: flex; align-items: center; gap: 40px; }
+
+        .logo { 
+            font-weight: 900; 
+            font-size: 40px; /* Higanteng Logo */
+            letter-spacing: -2px; 
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--rbx-text); 
+            font-weight: 600; 
+            font-size: 22px; /* Malaking Links */
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--rbx-blue); }
+
+        .header-profile { display: flex; align-items: center; gap: 15px; }
+
+        .user-name-top {
+            font-weight: 700;
+            font-size: 20px; 
+        }
+
+        .user-avatar-mini {
+            width: 55px; 
+            height: 55px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid var(--rbx-border);
+        }
+
+        .user-avatar-mini img { width: 100%; height: 100%; object-fit: cover; }
+
+        .content-wrapper { max-width: 1100px; margin: 20px auto; padding: 20px; }
+
+        /* --- PLAYER PROFILE SECTION --- */
+        .player-header {
+            display: flex;
+            align-items: center; gap: 25px; margin-bottom: 25px;
+            background: white; padding: 30px; border-radius: 12px; border: 1px solid var(--rbx-border);
+        }
+        .player-pfp-large { width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 1px solid var(--rbx-border); }
+        .player-pfp-large img { width: 100%; height: 100%; object-fit: cover; }
+
+        .player-details h2 { font-size: 32px; margin: 0; }
+
+        /* --- BOX STYLING --- */
+        .section-box {
+            background: var(--rbx-card);
+            border: 1px solid var(--rbx-border);
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+        }
+        .section-box h1 { font-size: 36px; margin-bottom: 20px; }
+        
+        .image-container { width: 100%; max-width: 850px; margin: 20px auto; border-radius: 10px; overflow: hidden; border: 1px solid #eee; }
+        .image-container img { width: 100%; display: block; }
+
+        .play-button {
+            background-color: var(--rbx-blue);
+            color: white; border: none; padding: 15px 50px;
+            font-size: 22px; font-weight: 600; border-radius: 10px; cursor: pointer;
+            box-shadow: 0 4px 0px #0084D1; /* Roblox 3D button effect */
+            transition: 0.1s;
+        }
+        .play-button:active { transform: translateY(2px); box-shadow: 0 2px 0px #0084D1; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="homepage.html" class="logo">ROBLOX</a>
+            <div class="nav-links">
+                <a href="homepage.html" style="color: var(--rbx-blue);">Home</a>
+                <a href="favgames.html" style="margin-left: 20px;">Favorite Games</a>
+            </div>
+        </div>
+        <div class="header-profile">
+            <span class="user-name-top">SHAdowBYTE</span>
+            <div class="user-avatar-mini">
+                <img src="avatar.jpg" alt="Avatar">
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="player-header">
+            <div class="player-pfp-large">
+                <img src="avatar.jpg" alt="Player Profile">
+            </div>
+            <div class="player-details">
+                <h2 style="margin:0;">Hello, SHAdowBYTE!</h2>
+                <span style="color: #65676B; font-size: 18px;">@terrencegood01</span>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h1>Favorite Avatar</h1>
+            <div class="image-container">
+                <img src="riblox.png" alt="Main Game Preview">
+            </div>
+            <a href="favgames.html">
+                <button class="play-button">View Favorite Games</button>
+            </a>
+        </div>
+    </div> 
+</body> 
+</html>
